@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title></title>
+</head>
+<body>
+    <header class="header">
+
+        <a href="#" class="logo">
+            <img src="img/logo/revo.png" alt="">
+        </a>
+    
+        <div class="navbar">
+                
+                <nav class="menu">
+                    <a href="#home">home</a>
+                    <a href="#profile">out profile</a>
+                    <a href="">Portofolio</a>
+                    <a href="">Message Us</a>
+                </nav>
+
+                <div class="icons">
+                    <div class="fas fa-bars" id="menu-btn"></div>
+                </div>
+        </div>
+        
+
+    </header>
+    
+    <!-- header section ends -->
+    
+    <!-- home section starts  -->
+    
+    <section class="home" id="home">
+    
+        <div class="content">
+            <h3>Hi Ernest, Welcome to website</h3>
+            <p>Ini adalah website latihan pertama</p>
+        </div>
+
+        <div class="image-content">
+            <img src="img/images/thanos.jpg" alt="">
+        </div>
+    
+    </section>
+    
+    <!-- home section ends -->
+
+    <!-- ourheadquarter section starts-->
+
+    <section class="our-headquarter" id="profile">
+        <div class="content">
+            <h3>Our Headquarter</h3>
+        </div>
+
+        <div class="headquarter-content">
+            <div class="headquarter">
+                <img src="img/images/jakarta-kopi.jpg" alt="">
+                <br>
+                <a href="#">Jakarta</a>
+            </div>
+            <div class="headquarter">
+                <img src="img/images/bandung-kopi.jpg" alt="">
+                <br>
+                <a href="#">Bandung</a>
+            </div>
+            <div class="headquarter">
+                <img src="img/images/surabaya-kopi.jpg" alt="">
+                <br>
+                <a href="#">Surabaya</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ourheadquarter section ends-->
+
+    <!-- message us section starts-->
+
+    <section class="message-us" id="message">
+        <div class="content">
+            <h3>Message Us</h3>
+        </div>
+
+        <div class="messageus-content">
+            <div class="form">
+                <form id="message-form">
+                    <table>
+                        <tr>
+                            <td>Nama</td>
+                            <td colspan="2">
+                                <input type="text" name="nama" placeholder="masukkan nama" autocomplete="off" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Tanggal Lahir</td>
+                            <td colspan="2">
+                                <input type="date" name="tanggal_lahir" placeholder="masukan tanggal lahir" autocomplete="off" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Jenis Kelamin</td>
+                            <td>
+                                <p><input type="radio" name="kelamin">Laki-laki</p>
+                                
+                            </td>
+                            <td>
+                                <p><input type="radio" name="kelamin">Perempuan</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pesan</td>
+                            <td colspan="2">
+                                <input type="text" name="pesan" placeholder="masukan pesan" autocomplete="off">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <input type="submit" name="submit" value="SUBMIT">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+    
+            <div class="content-form" id="output-section">
+                <div class="current" id="output-div"></div>
+            </div>
+        </div>
+
+    </section>
+    <script>
+        document.getElementById("message-form").addEventListener("submit", function (event) {
+            event.preventDefault(); // Mencegah halaman refresh saat pengiriman formulir
+    
+            var nama = document.getElementsByName("nama")[0].value;
+            var outputDiv = document.getElementById("output-div");
+            outputDiv.innerHTML = "<table><tr><td class='large'><span>Nama</span></td><td><span>" + nama + "</span></td></tr></table>";
+    
+            
+    
+            document.getElementById("message-form").reset(); // Reset formulir setelah pengiriman
+        });
+    </script>
+    <!-- message us section ends-->
+    
+    <!-- footer section starts  -->
+    
+    <section class="footer">
+    
+        <div class="credit">Created by <span>@ernest.ch</span></div>
+    
+    </section>
+    
+    <!-- footer section ends -->
+    
+    
+    
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
